@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>Pen by ...</title>
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+
+  
+      <style>
+      /* NOTE: The styles were added inline because Prefixfree needs access to your styles and they must be inlined if they are on local disk! */
+      @import url(https://fonts.googleapis.com/css?family=Open+Sans:300|Oswald:400,700,300);
+.blurImage {
+  position: relative;
+  width: 29%;
+  height: 0;
+  margin: 0 2%;
+  padding-bottom: 29%;
+  background: black;
+  float: left;
+  overflow: hidden;
+  box-shadow: 0 0 0 10px #c04830;
+}
+.blurImage:hover img {
+  width: 120%;
+  opacity: 1;
+  -webkit-filter: blur(0) grayscale(0);
+}
+.blurImage:hover .blurImage__copy {
+  -webkit-filter: blur(10px);
+  opacity: 0;
+}
+.blurImage img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 110%;
+  opacity: 0.5;
+  -webkit-filter: blur(5px) grayscale(1);
+  transform: translate(-50%, -50%);
+  transition: all 0.25s;
+}
+
+.blurImage__copy {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 90%;
+  text-align: center;
+  font-size: 0.75em;
+  transform: translate(-50%, -50%);
+  transition: all 0.25s;
+}
+
+/** GLOBAL STYLES **/
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background: #cc4d33;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 2em;
+  line-height: 1.5;
+  color: white;
+  -webkit-transform: rotateY(0deg);
+}
+
+body > p {
+  width: 50%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+h1 {
+  font-family: 'Oswald', sans-serif;
+  font-weight: 400;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+h3 {
+  font-family: 'Oswald';
+  font-weight: 400;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.container {
+  width: 90%;
+  max-width: 900px;
+  margin: 1.5em auto;
+}
+
+a {
+  color: white;
+}
+
+.cf:before,
+.cf:after {
+  content: " ";
+  display: table;
+}
+
+.cf:after {
+  clear: both;
+}
+
+.cf {
+  *zoom: 1;
+}
+
+    </style>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+
+</head>
+
+<body>
+  <h1>Blurry Image Thing</h1>
+<p>CSS blur isn't great, especially for images. But eventually they'll be super rad. <a href="http://omit.io/2013/12/13/make-a-thing-blurry-with-css/" target="_blank"> Check out my blog post</a> if you want to take the deep dive.</p>
+
+<div class="container cf">
+  <div class="blurImage">
+    <img src="http://fillmurray.com/g/500/700" />
+    <div class="blurImage__copy">
+      <h3>Bill Murray</h3>
+      <p>He's a guy this is him.</p>
+    </div>
+  </div>
+  <div class="blurImage">
+    <img src="http://placekitten.com/600/880" />
+    <div class="blurImage__copy">
+      <h3>Here is a Picture of a Cat With a Long Title</h3>
+      <p>Here's what a cat looks like</p>
+    </div>
+  </div>
+  <div class="blurImage">
+    <img src="http://placecage.com/600/800" />
+    <div class="blurImage__copy">
+      <h3>Nicolas Cage</h3>
+      <p>This is a different guy. This looks ok with multiple lines too.</p>
+    </div>
+  </div>
+</div>
+  <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+
+  
+</body>
+</html>
